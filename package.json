@@ -1,0 +1,38 @@
+{
+  "name": "vue-vpn-detector",
+  "version": "1.0.1",
+  "description": "Library for detecting VPNs and retrieving IP information in Vue.js applications.",
+  "main": "dist/vue-vpn-detector.umd.js",    
+  "module": "dist/vue-vpn-detector.es.js",     
+  "exports": {
+    ".": {
+      "import": "./dist/vue-vpn-detector.es.js",
+      "require": "./dist/vue-vpn-detector.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ip",
+    "vpn",
+    "proxy",
+    "detector",
+    "geolocation",
+    "vue" 
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaviDevLeon/vue-vpn-detector.git"
+  },
+  "author": "DaviDevLeon",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.0" 
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.0.0"
+  }
+}
