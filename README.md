@@ -26,6 +26,8 @@ yarn add vue-vpn-detector
 
 Import and use the library in your Vue.js project:
 
+### Example options API
+
 ```javascript
 import { useVpnDetector } from 'vue-vpn-detector';
 
@@ -40,6 +42,20 @@ export default {
     }
   },
 };
+```
+
+### Example composition API
+
+```javascript
+import { useVpnDetector } from 'vue-vpn-detector';
+
+const { isUsingVPN } = useVpnDetector();
+
+if (isUsingVPN.isVpn) {
+  console.log('The user is using a VPN.');
+} else {
+  console.log('The user is not using a VPN.');
+}
 ```
 
 ## Accessible Properties
@@ -60,13 +76,13 @@ export default {
 
 There is a limit of 45 requests per minute, so if this limit is exceeded, the API will return an HTTP 429 error. Make sure to handle errors properly in your application.
 
-The limit is set by the ip-api.com API. If you need to make more than 45 requests per minute, you must subscribe to one of their paid plans and modify the library to integrate your API KEY.
+The limit is set by https://ip-api.com API. If you need to make more than 45 requests per minute, you must subscribe to one of their paid plans and modify the library to integrate your API KEY.
 
 ## Providers Used for Functionality
 
 https://ip-api.com | To obtain detailed information about the IP.
 &
-https:/ipify.org | To obtain the IP.
+https://ipify.org | To obtain the IP.
 
 ## Contribution
 
@@ -78,7 +94,7 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Created by David Leon. If you have any questions, feel free to contact me.
+Created by David de Leon Gonzalez. If you have any questions, feel free to contact me at https://x.com/DaviDevLeon.
 
 ---
 
