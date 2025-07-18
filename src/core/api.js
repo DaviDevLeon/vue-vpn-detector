@@ -33,8 +33,8 @@ export async function fetchUserIp() {
     const data = await response.json();
     return data.ip;
   } catch (error) {
-    console.error("[API Error] No se pudo obtener la dirección IP:", error);
-    throw new Error("No se pudo obtener la dirección IP. Por favor, verifica tu conexión a internet.");
+    console.error("[API Error] Could not obtain IP address:", error);
+    throw new Error("Could not obtain IP address. Please check your internet connection.");
   }
 }
 
@@ -48,15 +48,15 @@ export async function fetchIpDetails(ip) {
   try {
     const response = await fetch(`${IP_API_URL}${ip}?fields=${IP_API_FIELDS}`);
     if (!response.ok) {
-      throw new Error(`Error al consultar ip-api.com: ${response.statusText}`);
+      throw new Error(`Error consulting ip-api.com: ${response.statusText}`);
     }
     const data = await response.json();
     if (data.status === 'fail') {
-      throw new Error(`ip-api.com reportó un error: ${data.message}`);
+      throw new Error(`ip-api.com reported an error: ${data.message}`);
     }
     return data;
   } catch (error) {
-    console.error("[API Error] No se pudo obtener la información detallada de la IP:", error);
-    throw new Error(`No se pudo obtener la información de la IP: ${error.message}`);
+    console.error("[API Error] Could not obtain detailed IP information:", error);
+    throw new Error(`Could not obtain IP information: ${error.message}`);
   }
 }
