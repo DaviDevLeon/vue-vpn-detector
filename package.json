@@ -1,6 +1,6 @@
 {
   "name": "vue-vpn-detector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for detecting VPNs and retrieving IP information in Vue.js applications.",
   "main": "dist/vue-vpn-detector.umd.js",    
   "module": "dist/vue-vpn-detector.es.js",     
